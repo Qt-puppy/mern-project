@@ -14,6 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
+        // why not working
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/notes`);
         console.log(res.data);
         setNotes(res.data);
