@@ -15,6 +15,7 @@ const HomePage = () => {
     const fetchNotes = async () => {
       try {
         // why not working
+        console.log("API URL:", import.meta.env.VITE_API_URL);
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/notes`);
         console.log(res.data);
         setNotes(res.data);
